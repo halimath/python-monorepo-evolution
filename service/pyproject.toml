@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "diceroller-service"
+version = "0.1.0"
+description = ""
+authors = ["Alexander Metzner <alexander.metzner@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "service" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+diceroller = { path = "../lib" }
+fastapi = "^0.110.0"
+
+[tool.poetry.group.dev.dependencies]
+hypercorn = "^0.16.0"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

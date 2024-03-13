@@ -66,7 +66,7 @@ class Roll:
             case _: raise TypeError('unsupported format string')
     
     def __str__(self):
-        return f"{'' if self.count == 1 else self.count}d{self.num_sides}{'' if self.mod == 0 else f"{self.mod:+}"}"
+        return f"{'' if self.count == 1 else self.count}d{self.num_sides}{'' if self.mod == 0 else format(self.mod, '+')}"
     
     def __repr__(self):
         return f"Roll({str(self)})"
